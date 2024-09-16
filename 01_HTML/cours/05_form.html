@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+</head>
+<body>
+
+  <h1>Les formulaires</h1>
+
+  <!-- POST : la plus utilisée, sécurité, il transmet les données de façon caché -> user, données bancaires etc... certificat ssl-->
+       
+  <!-- GET : ouvert, visible par tous, surtout utilisé pour de la recherche ou du filtrage. donnée en clair ds l'url Ex: Je cherche PHP dans un moteur de recherche-> https://www.google.com/search?q=php&sca_esv=f99155e75c23d etc.. q=php : il transmet les données via l'url, le mot tapé dans la barre de recherche le "&" rajoute un autre paramètre-->
+  
+  <form action="traitement.php" method="post">
+    <!-- ACTION : renvoi vers un autre fichier qui vérifie la donnée et puis transmet à la BDD et si tout ok, continue-->
+    <div>
+    <label for="nomid">Nom</label>
+    <input type="text" name="nom" id="nomid" placeholder="Nom" value="Anne-Laure"> 
+    </div>
+    <!-- NAME permet de récupérer la donnée dans la superglobal (tableau de données) dans PHP, name sera la clé (key) et sera associé à la saisie = la valeur (value). dans un même fichier, un name doit être unique ... -->
+    <!-- ID  est unique, associé au FOR, généralement on met le même nom que ds name, ici on met différent pour comprendre -->
+    <!-- le FOR du lavel est lié à l'ID -->
+    <!-- VALUE on peut mettre une data/valeur par défaut que l'on récupère dans la BDD -->
+    <br>
+    <div>    <!-- balise de type block, prend tte la place, du coup l'élément suivant se met à la ligne, le inline ne prend que l'espace de son contenu -->
+    <label for="prenomid">Prénom</label>
+    <input type="text" name="prenom" id="prenomid" placeholder="Prénom"> 
+    </div>
+
+    <br>
+
+    <!-- input type email ajoute une vérification sur le pattern (modèle) type d'un email (doit comporter une @ et un .com ou autre)-->
+    <div> 
+    <label for="emailid">Email</label>
+    <input type="email" name="email" id="emailid" placeholder="e_mail" required> 
+    <!-- required, requis, obligatoire, par contre en js il faudra vérifier que la valeur n'est pas nulle car dans l'inspecteur, on peut enlever le mode required-->
+    </div>
+
+    <br>
+
+    <div>    <!-- input de type password cache la saisie-->
+      <label for="pwdid">Password</label>
+      <input type="password" name="pwd" id="pwdid" placeholder="Password"> 
+      </div>
+  
+      <br>
+
+    <h1>Fieldset</h1>
+    <fieldset> 
+      <legend>CONNEXION</legend>
+
+      <div>
+        <!-- Faut le même nom sinon on peut tt sélectionner -->
+        <input type="radio" name="radio1" id="femme1id" value="femme1" checked>
+        <!-- checked, celui coché par défaut-->
+        <!-- value, -->
+        <label for="femme1id">Femme</label>
+        <input type="radio" name="radio1" id="homme1id" value="homme1">
+        <label for="homme1id">Homme</label>
+        <input type="radio" name="radio1" id="nongenre1id" value="nongenre1">
+        <label for="nongenre1id">Non genré</label>
+        <br><br>
+      </div>
+          
+      <label for="prenomid">Prénom</label>
+      <input type="text" name="prenom" id="prenomid" placeholder="Prénom"> 
+      
+      <br><br>
+
+      <label for="emailid">Email</label>
+      <input type="email" name="email" id="emailid" placeholder="e_mail" required> 
+      <br><br>
+      <input type="checkbox" name="connect" id="connectid" value="connect" checked>
+      <label for="connectid">Rester connecter</label>
+
+     <br><br>
+
+     <div>
+      <label for="dayid">Jour</label>
+      <input type="number" name="day" id="dayid"  min="1" max="31" value="1" >
+     </div>
+
+    <br><br>
+
+    <div>
+      <label for="year1id">Année</label>
+      <input type="number" name="year1" id="year1id"  min="1920" max="2100 " value="2024" >
+     </div>
+
+    <br><br>
+
+
+    <div>
+      <label for="month1id">Année en Scroll et mois</label>
+      <input type="month" name="month11" id="month11id" value=""  >
+     </div>
+
+     <!-- ou faire un select de 1 à 12 pour les mois -->
+
+    <br><br>
+
+    
+
+    <label for="monthid"> Mois de Naissance </label>
+    <select name="month" id="monthid">
+      <!-- <option value="">Mois</option> -->
+      <option value="janv">01</option>
+      <option value="fev">02</option>
+      <option value="mars">03</option>
+      <option value="avr">04</option>
+      <option value="mai">Mai</option>
+      <option value="juin">Juin</option>
+      <option value="juill">Juillet</option>
+      <option value="aout">Août</option>
+      <option value="sept">Septembre</option>
+      <option value="oct">Octobre</option>
+      <option value="nov">Novembre</option>
+      <option value="dec">Décembre</option>
+   </select>
+
+   <br><br>
+
+
+     <a href="./connexion.html">Déjà un compte? Connectez-vous</a>
+
+    </fieldset>
+
+    
+
+    <h2>Checkbox même name pour regrouper car en lien</h2>
+
+    <div>
+      <!-- pour les checkbox, on a le droit de mettre le même name, c'est une exception -->
+      <input type="checkbox" name="competence" id="phpid" value="php" checked>
+      <!-- checked, celui coché par défaut-->
+      <!-- value, -->
+      <label for="phpid">PHP</label>
+      <input type="checkbox" name="competence" id="jsid" value="js">
+      <label for="phpid">JS</label>
+      <input type="checkbox" name="competence" id="cssid" value="css">
+      <label for="phpid">CSS</label>
+    </div>
+
+    <br>
+
+    <h1>Checkbox pas même name</h1>
+
+    <div>
+      <!-- pour les checkbox, on a le droit de mettre le même name, c'est une exception -->
+      <input type="checkbox" name="vaisselle" id="vaisselleid" value="vaisselle" checked>
+      <!-- checked, celui coché par défaut-->
+      <!-- value, -->
+      <label for="vaisselleid">Vaisselle</label>
+      <input type="checkbox" name="four" id="fourid" value="four">
+      <label for="fourid">Four</label>
+      <input type="checkbox" name="frigo" id="frigoid" value="frigo">
+      <label for="frigoid">Frigo</label>
+    </div>
+
+    <br>
+
+    <h1>Radio</h1>
+
+    <div>
+      <!-- Faut le même nom sinon on peut tt sélectionner -->
+      <input type="radio" name="radio" id="femmeid" value="femme" checked>
+      <!-- checked, celui coché par défaut-->
+      <!-- value, -->
+      <label for="femmeid">Femme</label>
+      <input type="radio" name="radio" id="hommeid" value="homme">
+      <label for="hommeid">Homme</label>
+      <input type="radio" name="radio" id="nongenreid" value="nongenre">
+      <label for="nongenreid">Non genré</label>
+    </div>
+
+    <br><br>
+
+    <div>
+      <label for="birthid">Date de naissance</label>
+      <input type="date" name="birth" id="birthid">
+    </div>
+
+    <br>
+
+    <!-- Equivalent radio button mais en un menu déroulant et non x button, généralement qd il y a plus de 4-5 réponses possibles-->
+    <label for="monthid"> Mois de Naissance </label>
+        <select name="month" id="monthid">
+          <!-- <option value="">Mois</option> -->
+          <option value="janv">Janvier</option>
+          <option value="fev">Février</option>
+          <option value="mars">Mars</option>
+          <option value="avr">Avril</option>
+          <option value="mai">Mai</option>
+          <option value="juin">Juin</option>
+          <option value="juill">Juillet</option>
+          <option value="aout">Août</option>
+          <option value="sept">Septembre</option>
+          <option value="oct">Octobre</option>
+          <option value="nov">Novembre</option>
+          <option value="dec">Décembre</option>
+       </select>
+
+       <br><br>
+
+       <h1>Optgroup</h1>
+
+       <!-- Fait des groupes de métiers par exemple -->
+       <!-- selected en sélectionne un par défaut -->
+
+    <label for="jobid"> Métiers </label>
+        <select name="job" id="jobid">
+          <option value="">Choisir</option>
+          <optgroup label="DEV">
+          <option value="devback" selected>Développeur Back</option>
+          <option value="devfront">Développeur Front</option>
+          <option value="devfull">Développeur Full</option>
+          </optgroup>
+          <optgroup label="DESIGN">
+            <option value="design">Design Back</option>
+            <option value="designfront">Design Front</option>
+            <option value="designfull">Design Full</option>
+            </optgroup>
+        </select>
+      
+      <br><br>
+
+    <div>
+      <input type="file" name="color" id="cvid" accept=".jpg, .svg" multiple>
+      <!-- accept pour restreindre à une contrainte, multiple pour plusieurs fichiers-->
+    </div>
+
+    <br>
+
+    <div>
+      <label for="colorid">Palette de couleur</label>
+      <input type="color" name="color" id="colorid">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="priceid">Fourchette de prix</label>
+      <input type="range" name="price" id="priceid"  min="0" max="500" value="400" step="100">
+      <!-- value celle par défaut, step = palier 100 par 100 ici, pour affichage valeur c'est en js on peut faire une graduation en html-->
+    </div>
+
+    <br>
+
+    <div>
+      <!-- value celle par défaut, step = palier 100 par 100 ici, pour affichage valeur c'est en js on peut faire une graduation en html-->
+      <label for="texteaeraid">Message</label>
+      <br>
+      <textarea type="texteaera" name="texteaera" id="texteaeraid"  cols="20" rows="10">Ne pas mettre un espace entre les 2 balises car il va l'enregistrer comme une donnée</textarea>
+      <!-- ne pas mettre un espace entre les 2 balises car il va l'enregistrer comme une donnée-->
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Button Submit</button> <!-- pareil que input submit, à priviligier -->
+      <br><br>
+      <input type="submit" value="Input type Submit">
+      <br><br>
+      <input type="button" value="Input type Button"> <!-- ne soumet pas -->
+      <br><br>
+      <input type="reset" value="Input type Reset"> <!-- vide tout le formulaire -->
+    </div>
+
+    
+
+   
+
+
+    
+
+    
+
+  </form>
+
+
+</body>
+</html>

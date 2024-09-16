@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+}
+
+div{
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+
+  /* se mettent seulement sur élément principal et non sur hover, lui le sait*/
+  transition-duration: 1s; /* en temps*/
+  transition-property: all; /*ou on l'applique à une propriété ex : transition-property: background-color, color ; */
+  /* si pn l'a appliqué à 2 propriétés
+  ex : transition-property: background-color, color;
+      Transition-duration:1s, 4s; s'exécute dans le même ordre*/
+  transition-timing-function: ease; /*voir transition-timing exemple dans 08_transition*/
+  /* ease | linear | ease-in | ease-in-out | ease-out | cubic-bezier */
+ 
+  /* transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+  /* transition-delay: 2s; */
+
+  transition: all 1s ease;
+
+}
+
+div:hover{
+  background-color: lightgreen;
+  color: #fff;
+  padding: 32px;
+  /* transition-duration: 1s;
+  transition-property: all; */
+}
+
+/* div:active{
+  background-color: lightcoral;
+  color: #fff;
+  padding: 32px;
+  transition-duration: 1s;
+  transition-property: all;
+} */

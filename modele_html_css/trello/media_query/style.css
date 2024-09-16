@@ -1,0 +1,86 @@
+/* POINT DE RUPTURE  */
+/* SMALL DEVICE ->  0 à 599px */
+/* MEDIUM DEVICE ->  600px à 899px */
+/* LARGE DEVICE ->  900px à 1199px */
+/* EXTRA LARGE DEVICE ->  1200px  */
+
+@media (max-width: 599px) {
+
+  .btn{
+    line-height: 4.8rem;
+  }
+
+  .title{
+    font-size: 3.6rem;
+  }
+  
+  .sub-title{
+    font-size: 1.8rem;
+  }
+
+  /* HERO BANNER */
+  .hero-banner article{
+    max-width: inherit;
+    flex: 0 1 auto;
+  }
+
+  .hero-banner article h1{
+    font-size: 4rem;
+  }
+  .hero-banner article {
+    font-size: 1.8rem;
+  }
+
+  /* OUR TRIPS */
+  .trips .container{
+    gap: 6rem;
+  }
+
+  .trip div h3{
+    font-size: 3.2rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+  }
+
+  /* LOTTERY */
+  .lottery form{
+    align-items: center;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .lottery form input[type="email"]{
+    
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 899px) {
+  
+  .menu-icon{
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1  ;
+  }
+
+  .menu {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    transition: all .4s ease-in-out;
+    width: 100vw;
+    background-color: #fff;
+  }
+
+  .menu li{
+    width: 100%;
+    text-align: center;
+  }
+
+}

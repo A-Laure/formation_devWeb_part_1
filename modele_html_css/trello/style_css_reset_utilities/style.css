@@ -1,0 +1,204 @@
+/*!---- FONT IMPORT -------*/
+
+/*!---- RESET NAVIGATOT AND PARAMETERS -------*/
+*,
+*::before,
+*::after {
+	/* to keep initial "section" size if padding */
+	box-sizing: border-box;
+}
+
+* {
+	/* each  margin and padding element initialized to 0 */
+	margin: 0;
+	padding: 0;
+}
+
+
+html,
+body {
+	/* html and body height element must be defined by 100% of is parent contenair*/
+	height: 100%;
+	font-size: 62.5%;
+	/*rem settings 20px*10=2rem*/
+	scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* when the text reaches the end of the container, allows the navigator to break betwwen words and insert a break line */
+	overflow-wrap: break-word;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	/*By default, a link is blue or violet, so here we're telling him to be "color: #213442;" default parameter in body*/
+	color: inherit;
+}
+
+/*!----UTILITIES / TO BE CHANGE FOR MODEL INTEGRATION-------*/
+
+
+body {
+	/*usually used*/
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	/* for a cleaner and smoother font appareance  */
+	font-family: "Montserrat", sans serif;
+	color: #213442;
+}
+
+:root {
+	--text-primaryColor: #000 ;
+	--text-secondaryColor: ;
+	--btn-primaryColor: #ff1732; 
+	--btn-secondaryColor: ; 
+	--primary-hover: #C53135;
+	--bkgrd-header: ;
+
+}
+	
+.container {	
+  max-width: 100rem;
+  /*  0 top and bottom margin = 0, auto : left and right margin  spaces are egally distributes*/
+  margin: 0 auto;
+	padding: 0 2rem;
+  }
+
+	/* put div or else side by side*/
+.d-flex {
+  display: flex;  
+}
+
+.d-grid {
+  display: grid;
+	grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 2.4rem;
+}
+
+.col-2{
+  grid-column: span 2;
+}
+
+.col-5{
+  grid-column: span 5;
+}
+
+.col-4{
+  grid-column: span 4;
+}
+
+.col-7{
+  grid-column: span 7;
+}
+
+.col-10{
+  grid-column: span 10;
+}
+
+.col-12{
+  grid-column: span 10;
+}
+
+section {
+  /*unité à changer selon*/
+  /* padding: 10rem 4rem; */
+  text-align: center;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 8rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--btn-primaryColor);
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+  cursor: pointer;
+	text-transform: capitalize;
+  font-size: 1.2rem;
+	letter-spacing: 1px;
+  font-weight: 700;  
+  line-height: 4rem;
+	padding: 0 4rem;  
+}
+
+.btn2 {
+  background-color: var(--btn-secondaryColor);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/*!----USUALLY UUSED TO BE CHANGED FOR NEED-----*/
+
+/* h1{
+	font-family: ;
+	font-size: 5rem;
+	font-weight: ;
+	color: ;
+	line-height: ;
+}
+
+h2{
+	font-family: ;
+	font-size: 4.5rem;
+	font-weight:  ;
+	color: ;
+	line-height: ;
+}
+
+h3{
+	font-family: ;
+	font-size: 4rem ;
+	font-weight: ;
+	color: ;
+	line-height: ;
+}
+
+p{
+	font-family: ;
+	font-size: ;
+	font-weight: ;
+	color: ;
+	line-height: ;
+} */
+

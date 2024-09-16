@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableaux</title>
+</head>
+<body>
+
+  <table border = "1" cellpadding="10" cellspacing="20"> <!-- Attention border est déprécié, sera ds CSS -->
+    <tbody> <!-- pour indiquer que c'est ma donnée -->
+      <tr>
+        <td colspan="2">1</td> <!-- colspan, étend les cellules sur le nombre de colonnes spécifiées -->
+        <td>2</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">3</td> <!-- rowspan, étend les cellules sur le nombre de lignes spécifiées -->
+        <td>4</td>
+        <td>5</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <table border="1" cellpadding="10" style="border-collapse: collapse; background-color: rgb(200, 199, 212);"> <!-- cellpadding = marges internes de la cellule, cellspacing = marges externes de la cellule,collapse fusionne les bordures des cellules entre elles-->
+
+    <thead> <!-- entêtes, nom du champ, titres de colonnes-->
+      <tr style="background-color: aquamarine;"> 
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>E_mail</th>
+      </tr>
+    </thead>
+
+    <tfoot> <!-- pied de pages, peut être à la fin -->
+      <tr> 
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>E_mail</th>
+      </tr>
+    </tfoot>
+
+    <tbody> <!-- corps du tableau tr et td donc les datas-->
+      <tr>
+        <td>Doe</td>
+        <td style="background-color: rgb(164, 138, 206);">Jane</td>
+        <td>jane@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Doe</td>
+        <td>Joe</td>
+        <td>joe@gmail.com</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_Listes</title>
+</head>
+<body>
+
+  <!-- Dans l'idéal, on commence par la structure puis on déscend de niveau 
+    Ex: <ul>
+      <li>Salades>/li>  on ne rentre pas de suite dans salade, évite de s'emméler dans les balises
+      <li>Charcuterie>/li>
+  -->
+
+  <!-- Astuces :
+  
+    ul>(li{Légumes $})>3 marche pas mais l'idée....
+    
+    ul>((li>ul>li*2))*3 génère :
+
+    <ul>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+ </ul>
+
+    div.contact => crée directement l'attribut class avec contact
+
+    <div class="contact"></div> 
+  
+  div>a*4 =>
+
+  <div> 
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+  </div>
+  -->
+
+<h1><strong>Exercice 1 _ Les Listes</strong> </h1>
+<h1><strong>Entrées</strong> </h1>
+
+<!-- Salades/Charcuterie -->
+  <ul type = "disc">
+    <li>Salades
+      <ol>
+        <li>César</li>
+        <li>Cévenole</li>
+        <li>Chèvre chaud</li>
+      </ol>
+    </li>
+  </ul>
+      
+  <ul >
+    <li>Charcuterie
+      <ol type = "I" >
+        <li>Rillettes</li>
+        <li>Saucissons</li>
+      </ol>
+    </li>
+  </ul>
+
+<h1><strong>Plats</strong> </h1>
+
+<!-- Viandes/Poissons/Vegan -->
+  <ul type = "disc">
+    <li>Viandes
+      <ul>
+        <li>Entrecôtes frite</li>
+        <li>Magret</li>
+      </ul>
+    </li>
+    </ul>
+
+    <ul type = "disc">
+      <li>Poissons
+        <ul>
+          <li>Loups</li>
+          <li>Saumon</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul type = "disc">
+     <li>Vegan
+       <ul>
+          <li>Mousse aux marrons</li>
+         <li>Ragout de haricots blancs</li>
+       </ul>
+      </li>
+    </ul>
+
+    <h1><strong>Exercice 2 _ Les Listes</strong> </h1>
+
+      <ol> <!-- Frais/Alcool/Divers -->
+        <li>Frais
+        <ol type="a">
+          <li>Légumes</li>
+            <ul type="square">
+              <li>Légumes 1</li>
+              <li>Légumes 2</li>
+              <li>Légumes 3</li>
+            </ul>
+          </li>
+
+          <li>Viandes
+          <ul type="circle">
+            <li>Viandes 1</li>
+            <li>Viandes 2</li>
+            <li>Viandes 3</li>
+          </ul>
+        </li>
+
+         <li>Fromages
+          <ul type="disc">
+            <li>Fromage 1</li>
+            <li>Fromage 2</li>
+            <li>Fromage 3</li>
+          </ul>
+        </li>
+          
+
+        <li>Alcools
+          <ol type = "a">
+            <li>Bières</li>
+            <li>Vodka</li>
+            <li>Pastis</li>
+          </ol>
+        </li>
+        
+        <li>Divers
+        <ol type = "a">
+          <li>Hygiène
+            <ul type ="disc">
+              <li>Gel douche</li>
+              <li>Dentifrice</li>
+              <li>Déo</li>
+            </ul>
+          </li>
+          <li>Vêtements
+          <ul type ="square">
+            <li>Culotte</li>
+            <li>Pulls</li>
+            <li>Déo</li>
+          </ul>
+         </li>
+
+          <li>Autres
+           <ul type ="circle">
+            <li>Rideaux</li>
+            <li>Nappe</li>
+            <li>Chaises</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+
+    
+
+
+  
+
+
+
+
+  
+</body>
+</html>

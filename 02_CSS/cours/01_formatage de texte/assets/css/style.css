@@ -1,0 +1,60 @@
+
+/* les unités les plus courantes px,vw,m -peu utilisé-, rem - très utilisé- */
+
+/* font "inter" très utilisée (gratuite) car beaucoup de styles possibles et une des plus faciles à lire*/
+
+/* on ne fera pas ainsi, et même on fera un reset pour enlever ce qui est par défaut car en focntion des navigateurs on peut avoir des surprises*/
+
+/*vaut mieux faire import d'une font ds css, plus logique que ds html qui est fait pour la structure"*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  font-family: "inter", sans-serif; /* qd entre "" signe que pas une fonte system, inter a été importée */
+  /*attention sur google font, verifier que la font est marqué commercial dans about et licenses =ok gratuites*/
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif; /*en priorité arial, si pas, la suivante etc... la sans serif présente sûre partout. Sans sérif, sans empattement, serif (à éviter pour les paragraphes, plutôt pour les titres), avec empattement*/
+  font-size: 64px; 
+  text-transform: uppercase;
+  /*capitalize, met toutes les 1ères lettre de chaque mot en maj
+    none : n'applqie aucune valeur à cette propriété*/ 
+    text-align: center;
+    letter-spacing: 5px; /*beaucoup utilisé pour les titres, peut être négatif pour resserer ou faire rentrer le dernier mot sur la ligne*/
+}
+
+h2{
+  font-family: "Platypi", serif;
+  font-size: 48px;
+  font-weight:400; /* plutôt utiliser les valeurs*/
+  font-style: italic;
+  text-decoration: overline;
+}
+
+p{
+  font-size: 16px;
+  line-height: 1.5; /*mieux en ratio (entre 1.2 - pour les titres et 1.5 pour les textes mais on peut jusqu'à 1.8)que en px, si font fait 16px, 2 fera 32, 1.5 fera 24*/
+  text-align:justify; /*justify peu utilisé ou pas en web, left celui par défaut*/
+  word-spacing: 20px;
+  letter-spacing: 5px; /*beaucoup utilisé pour les titres*/
+  text-indent:24px; /* décale le 1er mot = tab)*/
+} 
+
+.hidden{
+  display: none;
+}
+
+a{
+  text-decoration:none /*enlève la deco notamment par ex le soulignement sur le lien GOOGLE.COM*/
+}
+
+.btn{
+  background-color: aqua;
+  color : black;
+  padding: 8px 32px;
+  border-radius: 8px;
+}
+

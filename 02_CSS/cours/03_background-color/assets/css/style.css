@@ -1,0 +1,35 @@
+
+
+div{
+  width:200px;
+  height: 100px;
+  /* min-height : 100px;
+  max-height: 100px; */
+  background-color: #ab75fd; /*min ou maj ok*/
+  color: blue;
+  overflow: hidden; /*ou min-height et width*/
+}
+
+/* couleur :
+- rgb (red, green, blue) : valeur de 0 à 255, penser aux lampes qui s'allument dc noir 0,0,0 et blanc 255,255,255, rouge 255,0,0
+
+- rgba : alpha pour opacity, la dernière valeur entre 0 et 1 = % d'opacity
+
+- Hexadecimal : #00 00 00, les 2 premier = rouge, le deuxième vert et le troisième bleu
+0 à 9
+a à f = les dizaines
+
+#ff 00 00 = rouge
+
+- rgb relative
+- hsl l pour lightness /  plus rare
+- hsb pour brightness / rare
+*/
+
+.bkg-img{
+  background-image: url('../img/chien.jpg');
+  background-position: right top; /*x et y*/
+  /*background-size: contain; s'adapte à la taille*/
+  background-size: cover; /*s'étire à la taille*/
+
+}

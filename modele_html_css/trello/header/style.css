@@ -1,0 +1,73 @@
+/* !HEADER */
+header{
+  background-color: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .04);
+  position: fixed;
+  width: 100%;
+  padding: 0 4rem;
+  z-index: 100;
+}
+
+nav{
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+.logo{
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--dark-logo);
+}
+
+.logo span, .active, header nav ul li a:hover{
+  color: var(--primary);
+}
+
+header nav ul{
+  gap: 3.2rem;
+}
+
+header nav ul li a{
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* MENU BURGER */
+.menu-burger, .menu-icon{
+  display: none;
+  justify-self: end;
+  order: 3;
+}
+
+.menu-icon i{
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--dark);
+  transition: all .2s ease;
+}
+
+.menu-icon i + i{
+  margin-top: 6px;
+} 
+
+
+.menu-burger:checked ~ .menu{
+  height: calc(100vh - 7rem);
+  opacity: 1;
+
+}
+
+.menu-burger:checked + .menu-icon i:nth-child(1){
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-burger:checked + .menu-icon i:nth-child(2){
+  opacity: 0;
+}
+
+.menu-burger:checked + .menu-icon i:nth-child(3){
+  transform: translateY(-7px) rotate(-45deg);
+}

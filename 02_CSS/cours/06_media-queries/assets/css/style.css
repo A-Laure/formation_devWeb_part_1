@@ -1,0 +1,86 @@
+h1{
+  text-align: center;
+  color: #fff;
+  padding: 5%;
+  display: none;
+}
+
+
+/* GRAND ECRAN */
+@media screen and (min-width: 1201px) and (min-resolution: 300dpi) {
+  /* Pour les ecrans haute définition (exemple ecran retina mac) */
+  body{
+    background-color: black;
+  }
+
+  .sec1 h1{
+    display: block;
+  }
+
+  div {
+    background-image: url('img-mac.jpg');
+  }
+
+}
+/* @media screen and (min-width: 1201px)  {
+  
+  body{
+    background-color: black;
+  }
+
+  .sec1 h1{
+    display: block;
+  }
+
+} */
+
+/* NORMAL */
+@media screen and (min-width: 769px) and (max-width: 1200px){
+  
+  body{
+    background-color: green;
+  }
+
+  .sec2 h1{
+    display: block;
+  }
+
+
+}
+
+/* TABLETTE */
+@media screen and (min-width: 501px) and (max-width: 768px){
+  
+  body{
+    background-color: blue;
+  }
+
+  .sec3 h1{
+    display: block;
+  }
+
+}
+
+/* MOBILE */
+@media speech and (max-width: 500px){
+  
+  body{
+    background-color: pink;
+  }
+
+  .sec4 h1{
+    display: block;
+  }
+
+}
+/* @media screen and (max-width: 500px), (orientation: landscape){
+  
+  body{
+    background-color: orange;
+  }
+
+  .sec4 h1{
+    display: block;
+  }
+
+} */

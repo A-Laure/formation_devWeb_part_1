@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09-transform</title>
+
+  <style>
+
+    /*pour mémo: z = la profondeur*/
+
+    body{
+      background-color: #f3f3f3;
+    }
+
+    section{
+      width: 85%;
+      min-height: 100vh;
+      margin: 6.3% auto;
+      background-color: #fff;
+    }
+
+    .box{
+      background-color: lightblue;
+      width: 150px;
+      height: 150px;
+      margin-top: 200px;
+      transition: all .8s ease;
+    }
+
+/*--------------déplace sur l'axe des x, y , z*/
+    .translate:hover{
+      /* transform: translateX(400px); 
+      transform: translateY(400px); */
+      transform: perspective(500px) translate3d(10px, 0, -100px);
+      /* transform: translate(200px, 400px); */
+      
+    }
+
+    /*-----------effet zoom + ou -*/
+    .scale:hover{
+      /* transform: scale(.5);
+      transform: scale(2); */
+      /* transform: scaleX(2); */
+      transform: scaleY(2);
+    }
+
+
+    /*--------tourne, unité en degré*/
+    .rotate:hover{
+      transform-origin: 90% 50%;/* pour tous, change l'axe initial*/
+      transform: rotate(45deg);
+    }
+
+    /* -----------étire*/
+    .skew:hover{
+      transform: skewX(45deg) skewY(50deg);
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+  
+  <section>
+    <div class="box translate">Translate2d</div>
+    <div class="box scale">scale</div>
+    <div class="box rotate">rotate</div>
+    <div class="box skew">skew</div>
+  </section>
+
+</body>
+</html>

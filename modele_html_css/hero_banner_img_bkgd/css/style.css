@@ -1,0 +1,209 @@
+
+
+/* !--- RESET "NAVIGATOR"---- */
+*,
+*::before,
+*::after {
+  /* to keep initial "section" size if padding */
+  box-sizing: border-box;
+}
+
+* {
+  /* each  margin and padding element initialized to 0 */
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  /* html and body height element must be defined by 100% of is parent contenair*/
+  height: 100%;
+}
+
+
+/* default parameters*/
+body {
+  line-height: 1.5;
+  /*usually used*/
+  /* for a cleaner and smoother font appareance  */
+  -webkit-font-smoothing: antialiased;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #213442;
+  /* font-size: 1.6rem; */
+}
+
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,button,textarea,select {
+  font: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  /* when the text reaches the end of the container, allows the navigator to break betwwen words and insert a beak line (saut de ligne)*/
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  /*By default, a link is blue or violet, so here we're telling him  to be "color: #213442;" default parameter in body*/
+  color: inherit;
+}
+
+/* !--------- UTILITIES ------ CHANGE FOR NEED-------------- */
+
+html {
+  font-size: 62.5%;
+  /* for a visual smoothie scroll, "no bump" */
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 140rem;
+  /*  0 top and bottom margin = 0
+      auto : left and right margin  spaces are egally distributes*/
+  margin: 0 auto;
+  /* sets the top and bottom padding to 0 and the left and right padding to 2rem*/
+  padding: 0 2rem;
+}
+
+.d-flex {
+  display: flex;
+  /* put div or else side by side*/
+}
+
+section {
+  padding: 10rem 4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 5.6rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 8rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #09ad6e;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 6rem;
+  padding: 0 3.2rem;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #C53135;
+}
+
+/* !--------- HEADER  cHANGE FOR NEED--------------- */
+
+header {
+  background-color: burlywood;
+  padding: 10px;
+  /* a redéfinir*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0 4rem;
+}
+
+header nav {
+  /* background-color: aqua;  */
+  justify-content: space-between;
+  align-items: center;
+  /* item joue sur axe secondaire, row, pcpal = horizontal; seconadire = vertical et l'inverse pour column, place dans le block verticalement (haut - milieu -bas) */
+  /* height: 88px; */
+
+}
+
+/* TEXT LOGO */
+
+.logo {
+  /* background-color: #e83f43;  */
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 7rem;
+}
+
+/* IMG LOGO */
+
+/* .logo{
+	height: 8rem;
+	width: 12rem;
+	margin-top: 2rem;
+	
+} */
+
+.logo p,.active,a:hover {
+  color: #350fdd;
+}
+
+
+/* ------------MENU---------------*/
+
+header nav ul {
+  /* background-color: yellow; */
+  gap: 3.2rem;
+}
+
+header nav ul li {
+  /* background-color: rgb(31, 128, 173); */
+  line-height: 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  /* display: inline-block; */
+}
+
+
+/* ------------ BANNER/HERO - EXPLORE AND DISCOVER ----------- */
+
+/*default parameter container size auto*/
+
+.hero-banner {
+  /* !! img size, if not good, not full section*/
+  background-image: url('../img/paris.jpg');
+  min-height: 100vh; /* = 100% */
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hero-banner article {
+  background-color: white;
+  text-align: left;
+  padding: 3.2rem; /* all padding*/
+  border-radius: 6rem;
+  flex: 0 1 46%;
+
+}
+
+.hero-banner article h1 {
+  text-transform: capitalize;
+  font-size: 6.4rem;
+  margin-bottom: 2rem;
+
+}
+
+.hero-banner article p {
+  /* text-transform: capitalize; */
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}

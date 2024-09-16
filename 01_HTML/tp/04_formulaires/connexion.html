@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion</title>
+</head>
+<body>
+  <form action="/mon formulaire" method="post">
+
+<h1>Connexion</h1>
+
+<!-- NAME permet de récupérer la donnée, name sera la clé (key) et la saisie sera la valeur (value). dans un même fichier, un name doit être unique -->
+<!-- ID  est unique, associé au FOR, généralement on met le même nom que ds name, ici on met différent pour comprendre -->
+
+        <label for="e_mailid">E_mail:</label> 
+        <input type="text" id="e_mailid" name="useremail"/>
+      <br><br>
+      
+        <label for="pwdid">Mot de passe:</label> 
+        <input type="password" id="pwdid" name="userpwd"/>
+      <br><br>
+   
+
+    <div>
+      <label for="connectid">Rester connecter</label>
+      <input type="checkbox" id="connectid" name="connect" checked/>
+    </div>
+
+    <br>
+
+    <a href="./inscription.html">Pas de compte? Inscrivez-vous</a>
+
+     <br><br>
+
+    <div class="button">
+      <button type="submit"> Se connecter</button>
+    </div>
+
+
+  </form>
+  
+</body>
+</html>

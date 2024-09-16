@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* !--- RESET "NAVIGATOR"---- */
+*,
+*::before,
+*::after {
+  /* to keep initial "section" size if padding */
+  box-sizing: border-box;
+}
+
+* {
+  /* each  margin and padding element initialized to 0 */
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  /* html and body height element must be defined by 100% of is parent contenair*/
+  height: 100%; 
+  font-size: 62.5%; /*pour les rem  20px*10=2rem*/
+  scroll-behavior: smooth;
+}
+
+
+/* default parameters*/
+body {
+  line-height: 1.5; /*usually used*/
+  /* for a cleaner and smoother font appareance  */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Zilla Slab", serif;
+  color: #213442; /* à mettre dans la ROOT dans utilities*/
+  /* font-size: 1.6rem; */
+}
+
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,button,textarea,select {
+  font: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  /* when the text reaches the end of the container, allows the navigator to break betwwen words and insert a beak line (saut de ligne)*/
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  /*By default, a link is blue or violet, so here we're telling him  to be "color: #213442;" default parameter in body*/
+  color: inherit;
+}
+
+/* !--------- UTILITIES ------ CHANGE FOR NEED-------------- */
+
+
+/* !VARIABLES */
+
+:root{
+
+	--dark-text-color : #000829;
+	--bright-text-color : white;
+	--primary: #E83F43;
+	--secondary:rgb(35, 33, 46);
+	--primary-hover: #C53135;
+	--bk1: #000829;
+	--bk2:white;
+	--bk3: #bc5a45;
+	--bk4:#412923;
+	--bk5:rgb(184, 190, 197);
+	--bk-6: rgb(98, 104, 112);
+	
+	}
+	
+.container {
+  /* max-width: 140rem; regarder maquette pour l'unité */
+  /*  0 top and bottom margin = 0
+      auto : left and right margin  spaces are egally distributes*/
+  margin: 0 auto;
+  /* sets the top and bottom padding to 0 and the left and right padding to 2rem*/
+  padding: 0 5rem;
+}
+
+.d-flex {
+  display: flex;
+  /* put div or else side by side*/
+}
+
+section { /*unité à changer selon*/
+  padding: 10rem 4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 4.8rem;
+  margin-bottom: 2rem;
+	text-transform: capitalize;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 8rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 4rem;
+  padding: 0 4.5rem;
+  border-radius: 20px;
+	width:17.5rem;
+}
+
+.btn2{
+	background-color: var(--secondary);
+	margin-left: 1.5rem;
+	margin-bottom: 21rem;
+}
+
+.btn:hover {
+  background-color: #C53135;
+}
+
+/* !HEADER*/
+
+header{
+	position: fixed;
+	width: 100%;
+
+
+}
+
+nav {
+	height: 10rem;
+	background-color: var(--bk1);
+	width:100%;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.logo{
+	font-size: 3.8rem;
+	color: var(--bright-text-color);
+}
+
+nav img{
+	height: 3rem;
+	width:3rem;
+}
+
+/* ! HERO BANNER */
+
+.header-banner{
+	background-color: var(--bk1);
+	color: var(--bright-text-color);
+	padding-top: 30rem;;
+	
+}
+
+.header-banner div {	
+	margin-top: 9.5rem;
+}
+
+.header-banner a{
+	text-align: center;
+}
+
+.header-banner a img{
+	height: 4rem;	
+	margin-left: 88rem;
+	
+}
+
+/* !ICONS */
+
+.icons{
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-left: 8rem 20.5rem;	
+}
+
+.icons article{
+	max-width: 30rem;
+	
+}
+
+.icons article i{
+	font-size: 5.5rem;
+	margin-bottom: 4rem;;
+	}
+
+.icons article h3{
+	text-transform: capitalize;
+	font-size: 2rem;
+	font-weight: 400;	
+	margin-bottom: 4.5rem;
+}
+
+.icons article p{
+font-size: 1.2rem;
+}
+
+/* !CAPTURE */
+
+.grid{
+	grid-template-columns: 2;
+}
+
+.capture{
+	background-color: aqua;
+	/* padding-top: 10rem; */
+	color: var(--bright-text-color);
+	width: 100%;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.capture h2{
+	text-transform: capitalize;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.capture p{	
+	font-weight: 1.2rem
+}
+
+
+.capture .div1{
+	width:50%;
+	background-color: var(--bk4) ;
+}
+
+.capture .div2{
+width:50%;
+background-color: var(--bk3) ;
+}
+
+.capture .div1 article a {
+	display: flex;
+	flex-direction: column;
+	max-width: 15rem;
+	border: 1px solid white;
+	font-size: 2.2rem;
+	padding: 3.5rem;
+}

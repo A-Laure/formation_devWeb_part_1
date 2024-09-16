@@ -1,0 +1,54 @@
+.body{
+  background-color: #f5f5f5;
+}
+
+.box{
+  text-align: center;
+  width:250px;
+  height:250px;
+  float:left; /* mets tous les uns côte à côte*/
+  
+}
+
+.c_1{
+  background-color: lightblue;
+  float: left; /*on lui dit tu sors du flux, se met dans un autre calque*/
+}
+
+.c_2{
+  background-color: lightgreen;
+  float: left; 
+  
+
+}
+
+.c_3{
+  background-color: pink;
+  
+
+}
+
+.c_4{
+  background-color: orange;
+  
+}
+
+.c_5{
+  background-color: grey;
+  clear: both; /*permet qu'il ne se mette pas en ligne mais côte à côte*/
+}
+
+.c_6{
+  background-color: lightblue;
+  width:340px;
+  height: 400px;
+  margin:4%;
+
+}
+
+.c_6 img{
+  width:100%;
+  display: block;
+  position:relative;
+}
+

@@ -1,0 +1,16 @@
+
+
+div{
+  /* border-width: 2px;
+  border-style: solid;
+  border-color: blue;*/
+  padding: 10px;
+  border-radius:10px; 
+  border: 2px dashed black;
+   /* largeur, style,couleur, ordre important = super propriété, est prioritaire*/
+  border-right-style: solid; 
+  /* mis après car sinon prioritaire sur ligne précédente*/
+  box-shadow: 4px 6px 30px 20px black ;
+  /* le + courant /* offset-x | offset-y | blur-radius | spread-radius | color */ 
+}
+

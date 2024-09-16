@@ -1,0 +1,35 @@
+
+.css1{
+  background-color: grey;
+}
+
+.css2{
+  background-color:yellow;
+}
+
+.css3{
+  background-color:orange; 
+}
+
+.css4{
+  background-color:red;
+}
+
+.css5{
+  background-color:pink;
+  margin: 50px; 
+}
+
+.taille{
+  width:150px;
+  height:150px
+}
+
+.p30{
+  padding: 30px;
+}
+
+.border{
+  border: 15px solid black; 
+}
+

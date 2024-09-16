@@ -1,0 +1,25 @@
+/* Attention sui un fichier style aussi en parrallèle avec Bootstrap, il faudra toujours appeler notre style à nous en dernier pour qu'il soit appliqué sinon il prendra Bootstrap */
+
+
+/* Vaut mieux utilisé les classes que les id car plus performant et en plus utiisables où on veut alors que id est unique*/
+
+/* la classe est plus précise que la balise, l'id est encore plus précis */
+
+h1{
+  color: blue;
+  font-size:64px;
+}  
+
+/* p{
+  color: red;
+}   */
+
+.color_red{
+  color: red;
+}
+
+/* Pour cibler un id, plus fort que la classe, prend le dessus MAIS MOINS PERFORMANT DE PASSER PAR ID */
+
+#p1{
+  color: violet
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro CSS</title>
+
+  <!-- LINK : Lien vers un fichier 
+        ATTENTION, il prend le dernier en priorité.Si par exemple un style pour h1 dans les 2, prendra la règle du dernier-->
+
+  <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+  <link rel="stylesheet" href="style.css">
+  
+ 
+
+  <!-- On émet des règles :
+       - si on oublie le ";" le navigateur ne lit pas ce qu'il y a en  dessous, le ";" marque la fin de l'instruction et indique au navigateur qu'il peut enchainer sur la suivante
+       - on vise la balise h1, toutes les balises h1, 
+       - color = nom propriété, aqua est la valeur
+       - de préférence en casacade et non en ligne
+        
+  <style> 
+    h1{
+      color: blue;
+      font-size:64px;
+    }  
+  </style> -->
+
+</head>
+<body>
+
+  <h1>Mon titre 1</h1>
+  <!-- <h1 style = 'background-color: aqua;'>Mon titre</h1> -->
+
+  <p class="color_red" id="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam sunt doloribus ut officiis inventore? Et ipsa omnis eos commodi ducimus consequatur quisquam quos deleniti sunt. Quam exercitationem ea nemo.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam sunt doloribus ut officiis inventore? Et ipsa omnis eos commodi ducimus consequatur quisquam quos deleniti sunt. Quam exercitationem ea nemo.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam sunt doloribus ut officiis inventore? Et ipsa omnis eos commodi ducimus consequatur quisquam quos deleniti sunt. Quam exercitationem ea nemo.</p>
+  <p class="color_red">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam sunt doloribus ut officiis inventore? Et ipsa omnis eos commodi ducimus consequatur quisquam quos deleniti sunt. Quam exercitationem ea nemo.</p>
+
+  <h1 class="color_red" >Mon titre 2</h1>
+  <!-- <h1 style = 'background-color: aqua;'>Mon titre</h1> -->
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam sunt doloribus ut officiis inventore? Et ipsa omnis eos commodi ducimus consequatur quisquam quos deleniti sunt. Quam exercitationem ea nemo.</p>
+ 
+  <h2 class="color_red">Titre 2</h2>
+  
+</body>
+</html>

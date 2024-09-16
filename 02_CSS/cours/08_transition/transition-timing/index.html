@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition Timing</title>
+  <style>
+
+    .container{
+      margin-top: 200px;
+    }
+
+    
+
+    .box{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      transition-duration: 2s;
+      transition-property: width;
+    }
+
+    .container:hover .box{
+      width: 600px;
+    }
+    
+    .linear{
+      background-color: lightblue;
+      transition-timing-function: linear;
+    }
+
+    .ease{
+      background-color: lightgray;
+      transition-timing-function: ease;
+    }
+
+    .ease-in{
+      background-color: lightgreen;
+      transition-timing-function: ease-in;
+    }
+
+    .ease-out{
+      background-color: lightcoral;
+      transition-timing-function: ease-out;
+    }
+
+    .ease-in-out{
+      background-color: lightseagreen;
+      transition-timing-function: ease-in-out;
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box linear">Linear</div>
+    <div class="box ease">Ease</div>
+    <div class="box ease-in">Ease-in</div>
+    <div class="box ease-out">Ease-out</div>
+    <div class="box ease-in-out">Ease-in-out</div>
+  </div>
+
+</body>
+</html>

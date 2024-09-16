@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html{
+  scroll-behavior:smooth;
+  
+  /* permet d'avoir un ratio 1rem = 10px  */
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.d-flex{
+  display: flex;
+}
+
+/* si on veut optimisé le code pour eviter les repetitions */
+/* .p-x-20{
+  padding-left: 20px;
+  padding-right: 20px;
+} */
+
+/* ---- HEADER ---- */
+header{
+  /* background-color: pink; */
+  background-color: #F5F5F5;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  /* left: 0;
+  right: 0; */
+}
+
+nav{
+  /* background-color: lightgreen; */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav div {
+  background-color: lightblue;
+} */
+
+nav div a{
+  /* display inline block est un mix entre le inline et le block ce qui lui confere les proprietes des deux le comportement du inline sur la disposition (les elements de mettent cote a cote) et la posibilité de lui attribuer une hauteur et une largeur (chose que normalement nous ne pouvons pas faire sur un element inline ) */
+  display: inline-block;
+  margin-left: 36px;
+  color: rgba(0, 0, 0, .4);
+  text-align: right;
+  /* on utilise le line-height de façon "détourner" pour centrer le text dans le contenaire  */
+  line-height: 88px;
+}
+
+nav div a:hover, .active{
+  color: rgba(0, 0, 0, 1);
+}
+
+
+/* ---- HERO BANNER ---- */
+
+section.hero {
+  /* min-height: 860px; */
+  min-height: 83vh;
+}
+
+section.hero>*{
+  flex: 1 1 50%;
+}
+
+section.hero img{
+  width: 50%;
+  object-fit: cover;
+}
+
+section.hero div{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+section.hero div p{
+  font-size: 10rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+section.hero div h1{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+/* ---- NOTRE HISTOIRE ---- */
+.our-story, .partner {
+  min-height: 380px;
+  background-image: url('../img/motif.jpg');
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.our-story h2{
+  font-size: 10rem;
+  line-height: 1.2;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.our-story p{
+  max-width: 740px;
+}
+
+/* ---- GALLERY ---- */
+.gallery {
+  height: 490px;
+}
+
+.gallery>img{
+  object-fit: cover;
+}
+
+/* methode avancé de selection (mais vous pouvez aussi juste attribué des class aux éléments) */
+.gallery img:first-of-type{
+  width: 50%;
+}
+
+.gallery img:nth-of-type(2){
+  width: 20%;
+}
+
+.gallery img:last-of-type{
+  width: 30%;
+}
+
+/* ---- NOS PARTENAIRES ---- */
+.partner{
+  min-height: 360px;
+
+  /* on la deja ecrit pour la class our-story */
+  /* background-image: url('../img/motif.jpg');
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px; */
+}
+
+.partner h3{
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.partner div{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner div a{
+  margin: 30px;
+}
+
+
+/* ---- RESPONSIVE ---- */
+@media screen and (max-width: 620px){
+
+  /* html{
+    font-size: 40%;
+  } */
+
+  nav div a{
+    display: block;
+    line-height: 1.5;
+  }
+
+  section.hero img{display: none;}
+  section.hero div {
+    background-image: url('../img/chair-1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+
+  section.gallery{
+    flex-direction: column;
+  }
+
+  section.gallery>img{
+    width: 100%!important;
+    height: 33.333%;
+  }
+
+}

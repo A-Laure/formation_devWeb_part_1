@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin:0;
+}
+
+.container{
+  display: flex;
+ 
+}
+
+
+.body{
+  background-color: #f5f5f5;
+  
+}
+
+.box{
+  text-align: center;
+  font-family : roboto;
+  font-size : 48px;
+  color : white;
+  width:100vh; /*s'adapte à tout l'écran et tous les écrans*/
+  height:50vh;
+ 
+  
+}
+
+.box1{
+  background-color: lightblue;
+  
+  
+  
+}
+
+.box2{
+  background-color: lightgreen;
+  
+  
+}
+
+.box3{
+  background-color: pink;
+ 
+  
+}
+
+.box4{
+  background-color: orange;
+ 
+  
+}
+
+.box5{
+  background-color: grey;
+ 
+  
+}
+
+.box6{
+  background-color: lightblue;
+  
+  
+}
+
+.box7{
+  background-color: green;
+  
+  
+}
+
+.box8{
+  background-color: grey;
+  
+}
+
+.category{
+  background-color: lightcoral;
+  padding:12px;
+  position: absolute; /*se câle par rapport au parent le plus proche (le c_6, qui est en relatif ici)*/
+  top:24px;
+  left: 0;
+}
+
+/* chaque élément par défaut est en position static
+- absolute: par rapport au parent le + proche 
+- relative: change pas grand chose en comportement, visuellement change rien
+- fixed: + tard
+- sticky: +tard */

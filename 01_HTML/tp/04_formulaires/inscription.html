@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+</head>
+<body>
+  <form action="/mon formulaire" method="post">
+
+<h1>Inscription</h1>
+
+    
+        <legend>Select your genre</legend>
+        <br>
+       
+        <!-- name identique possible ici, qd les données ont des liens, on les regroupe sous le même name-->
+          <input type="radio" id="femme" name="drone" value="femme" checked />  <!-- checked, celui coché par défaut -->
+          <label for="femme">Femme</label>
+       
+          <input type="radio" id="homme" name="drone" value="homme" />
+          <label for="homme">Homme</label>
+      
+          <input type="radio" id="nongenre" name="drone" value="nongenre" />
+          <label for="nongenre">Non genré</label>
+       
+     
+      <br><br>
+
+<!-- NAME permet de récupérer la donnée, name sera la clé (key) et la saisie sera la valeur (value). dans un même fichier, un name doit être unique -->
+<!-- ID  est unique, associé au FOR, généralement on met le même nom que ds name, ici on met différent pour comprendre -->
+    
+        <label for="emailid">E_mail:</label> <br>
+        <input type="email" name="useremail" id="emailid" />
+      <br><br>
+    
+        <label for="pwdid">Mot de passe:</label> <br>
+        <input type="text" name="userpwd" id="pwdid" />
+      <br><br>
+     
+        <label for="birthdateid">Date de naissance:</label> <br>
+        <input type="text" name="userbirth" id="birthdateid" placeholder="Jour"/>
+      <br><br>
+      
+     
+        <label for="birth-select"> Mois de Naissance </label>
+        <select name="month" id="birth-select">
+          <option value="">Mois</option>
+          <option value="janv">Janvier</option>
+          <option value="fev">Février</option>
+          <option value="mars">Mars</option>
+          <option value="avr">Avril</option>
+          <option value="mai">Mai</option>
+          <option value="juin">Juin</option>
+          <option value="juill">Juillet</option>
+          <option value="aout">Août</option>
+          <option value="sept">Septembre</option>
+          <option value="oct">Octobre</option>
+          <option value="nov">Novembre</option>
+          <option value="dec">Décembre</option>
+       </select>
+      
+      <br><br>
+      
+        <label for="birthid">Année de naissance</label>
+        <input type="date" name="birth" id="birthid">
+        <!-- si on veut paramétrer une foruchette de date <input type="date" id="start" name="year-start" value="2024-01-01"  min="1920-01-01" max="2100-12-31" /> -->
+   
+ <br><br>
+
+ 
+
+ <label for="birthdate">Année de naissance:</label> <br>
+ <input type="text" id="birthyear" name="user-birth" placeholder="Année"/>
+<br><br>
+
+    <div class="button">
+      <button type="submit"> S'inscrire</button>
+    </div>
+
+    <br>
+
+    <a href="./connexion.html">Déjà un compte? Connectez-vous</a>
+
+    
+
+
+
+
+  </form>
+  
+</body>
+</html>
